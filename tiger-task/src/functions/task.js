@@ -9,9 +9,21 @@ export const createTask = async (task) => {
             createdAt: new Date(),
         });
         console.log('Document written with ID: ', docRef.id);
-
+        getTasks();
     } catch (error) {
         return error;
     }
 }
 
+export const getTasks = async (tasks) => {
+    const tasksArray = [];
+    const querySnapshot = await getDocs(collection(db, 'tasks'));
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, ' => ', doc.data());
+        tasksArray.push({
+            id: doc.id,
+            ...doc.data()
+        });
+        return tasksArray;
+    })
+}
