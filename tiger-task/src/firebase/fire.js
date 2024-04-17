@@ -5,7 +5,7 @@ require('dotenv').config()
 import 'dotenv/config';
 
 const firebaseConfig = {
-    apiKey: API_KEY,
+    apiKey: process.env.API_KEY,
     authDomain: "listapproot.firebaseapp.com",
     projectId: "listapproot",
     storageBucket: "listapproot.appspot.com",
