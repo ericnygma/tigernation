@@ -4,8 +4,10 @@ import { getAuth } from 'firebase/auth';
 require('dotenv').config()
 import 'dotenv/config';
 
+
+castle = process.env.API_KEY
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: castle,
     authDomain: "listapproot.firebaseapp.com",
     projectId: "listapproot",
     storageBucket: "listapproot.appspot.com",

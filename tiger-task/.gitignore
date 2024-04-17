@@ -23,8 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-src/firebase/fire.js
-fire.js
+
 .env*
 .flaskenv*
 !.env.project
